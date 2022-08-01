@@ -42,8 +42,8 @@ class UserStrokeInput:
                         pass
             pygame.display.update()
             if(loop == False):
-                pygame.image.save(screen,"screenshot.jpg")
-                self.img = cv2.imread('screenshot.jpg', 0)
+                # pygame.image.save(screen,"screenshot.jpg")
+                # self.img = cv2.imread('screenshot.jpg', 0)
                 # time.sleep(3)
                 pygame.quit()
                 break
@@ -84,7 +84,6 @@ class UserStrokeInput:
 
 inp = UserStrokeInput()
 inp.input_image()
-# inp.printImage()
 print(inp.getCoords())
 vals = inp.convertInpToMove()
 print(vals)
