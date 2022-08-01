@@ -14,6 +14,7 @@ class UserStrokeInput:
         self.pos2 = None
         self.distscalar = .056
         self.timeConst = .4
+
     def input_image(self):
         pygame.init()
         screen = pygame.display.set_mode((500, 500))
@@ -82,16 +83,16 @@ class UserStrokeInput:
         self.timeConst = input
 
 
-inp = UserStrokeInput()
-inp.input_image()
-print(inp.getCoords())
-vals = inp.convertInpToMove()
-print(vals)
-drone = Tello()
-drone.connect()
-drone.takeoff()
-# drone.send_rc_control(vals[0], 0, vals[1], 0)
-# time.sleep(inp.timeConst)
-# drone.send_rc_control(0, 0, 0, 0)
-drone.go_xyz_speed(0, vals[0], vals[1], vals[2])
-drone.land()
+# inp = UserStrokeInput()
+# inp.input_image()
+# print(inp.getCoords())
+# vals = inp.convertInpToMove()
+# print(vals)
+# drone = Tello()
+# drone.connect()
+# drone.takeoff()
+# # drone.send_rc_control(vals[0], 0, vals[1], 0)
+# # time.sleep(inp.timeConst)
+# # drone.send_rc_control(0, 0, 0, 0)
+# drone.go_xyz_speed(0, vals[0], vals[1], vals[2])
+# drone.land()
