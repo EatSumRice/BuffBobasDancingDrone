@@ -72,8 +72,16 @@ class UserStrokeInput:
         speed = dist/self.timeConst
         # velx = x_movement/self.timeConst
         # vely = y_movement/self.timeConst
+        
+        x_dir = -1 if x_movement < 0 else 1
+        y_dir = -1 if y_movement < 0 else 1
 
-        return (int(x_movement), int(y_movement), int(speed))
+        if(abs(x_movement) < 20):
+            x_movement = 20
+        if(abs(y_movement) < 20):
+            y_movement = 20
+    
+        return (x_dir * int(x_movement), y_dir * int(y_movement), int(speed))
 
 
     def setScalar(self, input):

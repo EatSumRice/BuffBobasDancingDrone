@@ -12,7 +12,9 @@ class ControlCenter:
     def __init__(self, m):
         self.moves = m
         self.movesList = []
-        # self.drone = Tello.connect()
+        self.drone = Tello()
+        self.drone.connect()
+        print(self.drone.get_battery())
     
     def getMoves(self):
         for i in range(self.moves):
@@ -34,5 +36,6 @@ class ControlCenter:
 cc = ControlCenter(4)
 cc.getMoves()
 cc.printMoves()
+cc.performMoves()
 
 
