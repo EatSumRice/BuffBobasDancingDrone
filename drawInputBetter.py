@@ -4,6 +4,7 @@ import cv2
 import os
 import time
 from djitellopy import Tello
+import math
 
 class UserStrokeInput:
     def __init__(self):
@@ -11,11 +12,11 @@ class UserStrokeInput:
         self.testimg2 = None
         self.pos1 = None
         self.pos2 = None
-        self.scalar = .05
-        self.timeConst = .3
+        self.distscalar = .056
+        self.timeConst = .4
     def input_image(self):
         pygame.init()
-        screen = pygame.display.set_mode((640, 640))
+        screen = pygame.display.set_mode((500, 500))
         pygame.display.set_caption("Insert Dance Move (Single Straight Line)")
         white_color = pygame.Color(255, 255, 255)
         blue_color = pygame.Color(0, 0, 255)
@@ -43,7 +44,7 @@ class UserStrokeInput:
             if(loop == False):
                 pygame.image.save(screen,"screenshot.jpg")
                 self.img = cv2.imread('screenshot.jpg', 0)
-                time.sleep(3)
+                # time.sleep(3)
                 pygame.quit()
                 break
             
@@ -60,16 +61,18 @@ class UserStrokeInput:
 
     def convertInpToMove(self):
         x1 = self.pos1[0]
-        y1 = 640 - self.pos1[1]
+        y1 = 500 - self.pos1[1]
         x2 = self.pos2[0]
-        y2 = 640 - self.pos2[1]
-        x_movement = self.scalar * (x2 - x1)
-        y_movement = self.scalar * (y2 - y1)
+        y2 = 500 - self.pos2[1]
+        x_movement = self.distscalar * (x2 - x1)
+        y_movement = self.distscalar * (y2 - y1)
         #cm/s
-        velx = x_movement/self.timeConst
-        vely = y_movement/self.timeConst
+        dist = math.sqrt(x_movement**2 + y_movement**2)
+        speed = dist/self.timeConst
+        # velx = x_movement/self.timeConst
+        # vely = y_movement/self.timeConst
 
-        return (velx, vely)
+        return (int(x_movement), int(y_movement), int(speed))
 
 
     def setScalar(self, input):
@@ -81,11 +84,15 @@ class UserStrokeInput:
 
 inp = UserStrokeInput()
 inp.input_image()
-inp.printImage()
+# inp.printImage()
 print(inp.getCoords())
 vals = inp.convertInpToMove()
 print(vals)
-# drone = Tello()
-# Tello.connect()
-# blueColor = (0, 0, 255)
-# pygame.display.update() #call everytime
+drone = Tello()
+drone.connect()
+drone.takeoff()
+# drone.send_rc_control(vals[0], 0, vals[1], 0)
+# time.sleep(inp.timeConst)
+# drone.send_rc_control(0, 0, 0, 0)
+drone.go_xyz_speed(0, vals[0], vals[1], vals[2])
+drone.land()
