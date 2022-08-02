@@ -15,6 +15,7 @@ class UserStrokeInput:
         clickedlist = []
         white_color = pygame.Color(255, 255, 255)
         blue_color = pygame.Color(0, 0, 255)
+        black_color = pygame.Color(0, 0, 0)
         screen.fill(white_color)
         loop = True
         while(loop):
@@ -26,7 +27,7 @@ class UserStrokeInput:
                     try:
                         pos = pygame.mouse.get_pos()
                         clickedlist.append(pos)
-                        pygame.draw.rect(screen, blue_color, (pos[0], pos[1], 10, 10))
+                        pygame.draw.rect(screen, black_color, (pos[0], pos[1], 10, 10))
                     except AttributeError:
                         pass
             pygame.display.update()
