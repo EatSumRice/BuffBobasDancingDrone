@@ -1,6 +1,7 @@
-note taking:
+## note taking:
 
-day 1:
+# day 1:
+
 using pyAudioAnalysis to recognize audio file (.wav or .mp3) first, then try basic feature extraction (bpm)
 
 so scratch that, seems like Librosa is the way to go
@@ -13,7 +14,8 @@ things to note about tempo tracker: is not great at determining time signature, 
 actually makes our lives easier since the drone has speed limitations already
 
 
-day 2:
+# day 2:
+
 there is a way to extract all the times another beat starts, which could prove very helpful for timing dance moves
 
 will look into it more to see if the half-time tempo quirk described above has any effect on these values
@@ -63,19 +65,43 @@ brief outline of how music playback and tempo detection works right now:
 5. brief countdown begins to allow user time to start music playback, then events begin happening (will be drone movements, but are print statements for now)
 
 flaws with current method: 
+
 .wav files are uncompressed and take up significant hard drive space; we need to be careful with how many songs we decide to go with
 
 music download can also be a lengthy process, taking at least a minute just to get a song (which will pose a problem if we take song reqeusts)
 
-preprocessing takes a while (nothing that can be done here, but maybe opt for shorter songs if we're going to do this live?)
+importing the libraries takes a while (nothing we can do here, but just keep that in mind)
 
 currently no way to initiate music playback through the program, so the synchronization between the dance moves and the music falls on the user
 
 
+tentative proposed solution:
+
+    from pygame import mixer
+
+    mixer.init()
+    mixer.music.load(filename)
+    mixer.music.play()
+
+use pygame audio player to start music concurrently with the dance sequence
+
+issue: possible to remove silence from start and end of audio file, but no way to save it and play it back. only solution now is to strip it
+manually beforehand, which will make it effectively impossible to take live song requests. if we want, we can ask instructors and other people
+what songs they would like to hear in advance.
+
+
+another issue: note recognition is really really difficult, so we may have to rely entirely on the beat to control the dance moves. no feasible
+way to implement time signature detection at the moment, so we could ask the user to input the time signature instead if they know.
+
+
+synchronization is still difficult. we will have to cut the audio files really precisely beforehand in order to get them to sync up properly.
+fortunately, most of these examples tend to fall into beat eventually if the audio files aren't perfectly trimmed.
 
 
 
 
-important links:
+
+
+### important links:
 https://hackernoon.com/audio-handling-basics-how-to-process-audio-files-using-python-cli-jo283u3y       - manipulating audio files
 https://towardsdatascience.com/top-3-python-packages-to-learn-audio-data-science-project-cbd11c100fe7   - audio analysis packages
