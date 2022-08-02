@@ -45,6 +45,24 @@ will not reliably or accurately reflect the actual beats or number of beats per 
 this method. however, if Jaden figures out the chord/note recognition, we can use changes in the bass chord as a metric for when measure changes are
 happening (C --> A chord, for example) 
 
+a bit of an issue to note with syncing: the program knows to ignore empty noise before and after a song. if we try to sync music playback with the beat
+detection, however, the beat detection may start before the actual music starts, causing the program to terminate before the music does. 
+
+brief outline of how music playback and tempo detection works right now:
+
+1. download a .wav
+2. pass its path through to the program (maybe implement `input()` to allow for user-inputted music, but would still have to exist on the hard drive)
+3. .wav is preprocessed (can take a short while, depending on how long the song is)
+4. tempo/sample rate are returned, two arrays are generated (beat times and beat durations)
+5. brief countdown begins to allow user time to start music playback, then events begin happening (will be drone movements, but are print statements for now)
+
+flaws with current method: 
+.wav files are uncompressed and take up significant hard drive space; we need to be careful with how many songs we decide to go with
+music download can also be a lengthy process, taking at least a minute just to get a song (which will pose a problem if we take song reqeusts)
+preprocessing takes a while (nothing that can be done here, but maybe opt for shorter songs if we're going to do this live?)
+currently no way to initiate music playback through the program, so the synchronization between the dance moves and the music falls on the user
+
+
 
 
 
