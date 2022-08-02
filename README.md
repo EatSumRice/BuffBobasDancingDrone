@@ -31,6 +31,19 @@ noticeable error.
 proposed solution: use the estimated BPM to initialize speed of the drone's movements, use the beat frames to make sure the drone
 does not fall out of time (move off beat)
 
+now: see if I can use the beat frames to make events happen on time (will just do print statements for now or something)
+events can align very accurately with the beat of the music, seemingly adjusting to subtle tempo changes as well. will try seeing
+how it fares against music with more noticeable tempo changes (rubato?)
+
+tested on Chopin's Waltz in A Minor: algorithm REALLY does not like drastic tempo changes. gets confused as tempo doesn't usually
+change on a whim like that, so sometimes counts extra beats or misses beats. fortunately, it always gets right back on track, so this isn't
+really an issue. 
+
+the only thing to note from this: if we have plans on making moves based on time signature (4 different moves for a 4/4 measure, for example),
+we can implement a method to check if any beats fluctuate significantly from the average beat length. if it does, then the recorded beats
+will not reliably or accurately reflect the actual beats or number of beats per measure. ALSO, we have no means of determining time signature with
+this method. however, if Jaden figures out the chord/note recognition, we can use changes in the bass chord as a metric for when measure changes are
+happening (C --> A chord, for example) 
 
 
 
