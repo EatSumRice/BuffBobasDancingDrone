@@ -4,7 +4,7 @@ import sys
 import cv2
 import os
 
-class UserStrokeInput:
+class createLines:
     def __init__(self, number):
         self.img = None
         self.testimg2 = None
@@ -12,7 +12,7 @@ class UserStrokeInput:
     def input_image(self):
         for i in range(self.times):
             pygame.init()
-            screen = pygame.display.set_mode((100, 100))
+            screen = pygame.display.set_mode((250, 250))
             pygame.display.set_caption("Insert Dance Move (Single Straight Line)")
             clickedlist = []
             white_color = pygame.Color(255, 255, 255)
@@ -28,7 +28,7 @@ class UserStrokeInput:
                         try:
                             pos = pygame.mouse.get_pos()
                             clickedlist.append(pos)
-                            pygame.draw.rect(screen, black_color, (pos[0], pos[1], 10, 10))
+                            pygame.draw.rect(screen, black_color, (pos[0], pos[1], 7, 7))
                         except AttributeError:
                             pass
                     if event.type == pygame.MOUSEBUTTONUP:
@@ -43,7 +43,7 @@ class UserStrokeInput:
 
 
 
-inp = UserStrokeInput()
+inp = createLines(100)
 inp.input_image()
 
 

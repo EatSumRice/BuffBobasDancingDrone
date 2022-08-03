@@ -25,7 +25,7 @@ If the user draws a line: it will return the start and end pos for a normal danc
 If the user draws a special shape: it will correspond to a flip or special curvy dance move.
 If the user draws something nonidentifiable: it will be classified as a line.
 
-To create the neural network, I had to:
+To create the neural network, I plan to:
 1. Get data of circles, triangles, lines, and squares from the internet 
    (Shapes: https://www.kaggle.com/datasets/cactus3/basicshapes/code, Lines: I created my own...)
     - Problem: When creating my own Lines, I needed to account for the fact that the pictures I got from the online dataset were 
@@ -33,4 +33,11 @@ To create the neural network, I had to:
 2. Transform this data into its pixel values + label.
 3. Train this data through a backpropagation neural network I created
 4. Test to see if the neural network is accurate
-5. 
+
+After talking through with an instructor, I realize that time constraints may force me to stop my attempts at a 
+neural network and simply ask the user to identify which type of movement he desires. 
+The user may choose from: 
+ - Linear movement
+ - Flip movement 
+ - 3d movement (back and forth rather than just in xz plane)
+ - Curved movement
