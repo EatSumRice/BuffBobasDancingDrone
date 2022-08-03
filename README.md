@@ -101,8 +101,37 @@ fortunately, most of these examples tend to fall into beat eventually if the aud
 
 
 
+# day 3:
+
+potential issues that may arise with integrating beat with dance moves:
+
+1. **input lag**: the drone may have noticeable lag responding to commands
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;experiment with hardcoded buffers in music playback in order to improve synchronicity 
+
+2. **too fast**: BPM of most songs might be too fast for the drone to dance on every beat
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;determine upper BPM limits of drone movement, half the BPM if songs exceed that tempo
 
 
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
 ### important links:
 https://hackernoon.com/audio-handling-basics-how-to-process-audio-files-using-python-cli-jo283u3y       - manipulating audio files
 

@@ -49,13 +49,13 @@ y = 1       # beat counter for measure
 m = 1       # measure counter
 # time.sleep(beat_durations[0])   # buffer in order to improve synchronicity 
 
-if pickup == 'y':
+if pickup == 'y':       # adds pickup beat per user input (extra preceding beat before first measure)
     y = time_sig
     print('pickup measure')
 elif pickup == 'n':
     pass
 
-for i in beat_durations:
+for i in beat_durations:        # records every measure change and every beat on time (can be subbed with real events)
     if y == 1:
         print('measure',m)
     print('beat',y,'(',x,')')
