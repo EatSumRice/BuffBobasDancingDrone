@@ -113,6 +113,49 @@ potential issues that may arise with integrating beat with dance moves:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;determine upper BPM limits of drone movement, half the BPM if songs exceed that tempo
 
+assuming the drone can do 1 move per second:
+
+**0 - 60 BPM**:     1 move per beat
+
+**61 - 120 BPM**:   1 move per 2 beats
+
+**121+ BPM**:
+
+    if (beats_per_measure % 3 == 0):      # if the beats per measure is evenly divisible by 3
+        do_move every 3 beats
+
+    elif (beats_per_measure < 6):         # if the beats per measure is not 3 and less than 6
+        do_move at start of measure
+
+    elif (beats_per_measure > 6):         # if the beats per measure is not evenly divisible by 3 and more than 6
+        x = beats_per_measure // 3
+        do_move x times per measure
+    
+things to note: so far, the algorithm hasn't really recognized any songs outside of the 61-120 bpm threshold; songs outside of this range are either so slow
+or so fast that they are classified in double time or half-time, respectively. though I'll keep these conditionals just in case, the more important thing to
+consider here is the time signature, *not* the tempo.
+
+here's why:
+
+in most cases, music will fall under the 61-120 bpm category, which means a dance move should occur every 2 beats (every odd beat). however, you would also
+have to consider the time signature; if there is an odd number of beats per measure, then the program would inevitably send two commands in a row. for example:
+
+    BEATS
+    1    2    3    4    5 || 1    2    3    4    5
+    ^         ^         ^    ^         ^         ^
+
+in a time signature of 3/4, 5/4, 7/4, etc... a dance move occurs at the start *and* end of a measure, so a check needs to be put in place to make sure
+no dance move occurs on the last beat. so, adding onto the info above:
+
+**61 - 120 BPM**:   1 move per 2 beats
+
+    if beat % 2 == 1:       # if the beat is an odd number
+        if beat != beats_per_measure:       # if not the last beat
+            do_move
+
+also, we need to make special cases for when the time signature is equal to 0 and 1. since there are so few beats, the dance move exceptions cannot be measure
+based, but instead based on the absolute beat of the song (e.g. beat 43 of the song vs. beat 3 of measure 11)
+
 
 
 
