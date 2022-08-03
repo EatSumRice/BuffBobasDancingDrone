@@ -1,4 +1,4 @@
-Monday 8/2/22 
+Monday 8/1/22 
 
 I created a base pygame window that takes the start and end pos of the user's click and maps a Tello move from it.
 It can only take straight lines, but it can take any number of them with my controlCenter class, which can get mutliple 
@@ -17,7 +17,7 @@ git commit -m "first commit"
 git checkout -b [your name]
 git push -u origin [your name]
 
-Tuesday 8/3/22
+Tuesday 8/2/22
 
 I have decided to make a neural network that can identify simple shapes and lines. 
 This is so that:
@@ -41,3 +41,18 @@ The user may choose from:
  - Flip movement 
  - 3d movement (back and forth rather than just in xz plane)
  - Curved movement
+
+
+Wednesday 8/3/22
+
+I was able to finish the user interface with the buttons to decide which type of move the user can choose from.
+I also made it so that each move is quick depending on the time constant desired. However,
+the drone's delay may prove to be a problem.
+
+I discussed with my teammate the probelm about how to separate the beats into moves. 
+If the song is around 120 BPM, that means there are aroudn 2 beats per second. A drone needs AT LEAST 1 second 
+per move, so we must make there be an interval of at least beat between each dance move. This does not even include
+the delay. Thus, we must account for the delay in our BPM calculations. I estimate that we must need at least 2 beats,
+or 2 seconds per dance move.
+
+In our code, we are now implementing how the drone precalculate the dance in advance.
