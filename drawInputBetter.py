@@ -183,7 +183,7 @@ class UserStrokeInput:
                 val = abs(y_movement)
                 speed = dist/self.timeConst
             
-            return (val, speed, self.mode)
+            return (int(val), int(speed), self.mode)
         else:
             x1 = self.pos1[0]
             y1 = 600 - self.pos1[1]
@@ -195,16 +195,16 @@ class UserStrokeInput:
             x_dir = -1 if x_movement < 0 else 1
             y_dir = -1 if y_movement < 0 else 1
 
-            if(abs(x_movement) < 20):
-                x_movement = 20
-            if(abs(y_movement) < 20):
-                y_movement = 20
+            if(abs(x_movement) < 50):
+                x_movement = 50
+            if(abs(y_movement) < 50):
+                y_movement = 50
 
             radiusx = x_movement/2
             radiusy = y_movement/2
             #cm/s
-            dist = math.sqrt(x_movement**2 + y_movement**2)
-            speed = dist/self.timeConst
+            dist = math.sqrt((x_movement-20)**2 + (y_movement-20)**2)
+            speed = 60
             # velx = x_movement/self.timeConst
             # vely = y_movement/self.timeConst
             
@@ -212,7 +212,7 @@ class UserStrokeInput:
             peakCurve = math.sqrt(radiusx**2 + radiusy**2)
 
         
-            return ((x_dir * int(abs(radiusx)), 0, int(peakCurve)), (x_dir * int(abs(x_movement)), 0, 0), int(speed), self.mode)
+            return (((x_dir * 50), y_dir * 50, 0), (x_dir * 50 * 2, 0, 0), int(speed), self.mode)
 
 
 
@@ -223,11 +223,11 @@ class UserStrokeInput:
         self.timeConst = input
 
 
-inp = UserStrokeInput()
-inp.input_image()
-print(inp.getCoords())
-vals = inp.convertInpToMove()
-print(vals)
+# inp = UserStrokeInput()
+# inp.input_image()
+# print(inp.getCoords())
+# vals = inp.convertInpToMove()
+# print(vals)
 # drone = Tello()
 # drone.connect()
 # drone.takeoff()
