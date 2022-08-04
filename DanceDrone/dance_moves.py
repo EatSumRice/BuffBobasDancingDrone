@@ -14,23 +14,29 @@ class DanceMoves:
  
     def move1(self):
         tello.send_rc_control(0, 0, 50, 100)
+        time.sleep(2)
         tello.send_rc_control(0, 0, -50, -100)
         print("Move 1 complete!")
  
     def move2(self):
         tello.send_rc_control(0, 20, 50, 70)
+        time.sleep(2)
         tello.send_rc_control(0, -20, -50, -70)
         print("Move 2 complete!")
  
     def move3(self):
         tello.send_rc_control(-25, 0, 25, 0)
+        time.sleep(2)
         tello.send_rc_control( 38, 0, 0, 0)
+        time.sleep(2)
         tello.send_rc_control(-25, 0, -25, 0)
         print("Move 3 complete!")
 
     def move4(self):
         tello.send_rc_control(50, 50, 50, 0)
+        time.sleep(2)
         tello.flip_back()
+        time.sleep(2)
         tello.move_down(50)
         print("Move 4 complete!") 
     
@@ -50,14 +56,19 @@ class DanceMoves:
 
     def move7(self):
         tello.send_rc_control(-20, 0, -30, -40)
+        time.sleep(2)
         tello.send_rc_control(20, 0, 30, -40)
+        time.sleep(2)
         tello.send_rc_control(-30, 0, 0, 50)
         print("Move 7 complete!") 
 
     def move8(self):
         tello.flip_right()
+        time.sleep(2)
         tello.send_rc_control(60, 0, 60, 0)
+        time.sleep(2)
         tello.flip_right()
+        time.sleep(2)
         tello.send_rc_control(0, 0, -30, 35)
         print("Move 8 complete!") 
 
@@ -65,11 +76,16 @@ class DanceMoves:
         tello.move_up(100)
         tello.move_back(20)
         tello.move_forward(20)
+        time.sleep(2)
         tello.send_rc_control(0, -40, -60, -30)
         print("Move 9 complete!") 
 
     def move10(self):
         tello.send_rc_control(0, 50, 100, 90)
+        time.sleep(2)
+        tello.move_down(50)
+        time.sleep(2)
+        tello.rotate_clockwise(100)
         print("Move 10 complete!") 
 
     move_list = ["",move1(),move2(),move3(),move4(),
