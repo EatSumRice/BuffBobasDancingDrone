@@ -1,0 +1,6 @@
+<launch>
+    <node name = "draw" pkg = "buff_boba_pkg"
+    type = "drawInputNode.py" output = "screen"/>
+    <node name = "driver" pkg = "buff_boba_pkg"
+    type = "driverNode.py" output = "screen"/>
+</launch>
