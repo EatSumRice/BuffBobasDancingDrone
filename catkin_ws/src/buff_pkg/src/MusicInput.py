@@ -17,7 +17,11 @@ class MusicInput(object):
         print('Enter .wav file:')
         self.file = input()
         self.time_sig = int(input('Enter beats per measure: '))
-        self.pickup = input('Pickup beat (y or n): ')
+        self.pickup_str = input('Pickup beat (y or n): ')
+        if self.pickup_str == "y":
+            self.pickup = True
+        else:
+            self.pickup = False
 
         path = Path().absolute().parent / "FinalProject" / "catkin_ws" / "src" / "buff_pkg" / "data"
         print(path)
@@ -43,8 +47,21 @@ class MusicInput(object):
         #TODO publish below 
         self.beat_durations = np.ediff1d(self.beat_times)     # create array of differences between beat frames to get durations
 
+    def song_pub(self):
+        song = Song()
+        song.filename = self.filename
+        song.tempo = self.tempo
+        song.time_sig = self.time_sig
+        song.pickup = self.pickup
+        self.pub_song.publish(song)
+        print("published")
+
 def __main__():
     musicInput = MusicInput()
+    musicInput.song_pub()
+    while not rospy.is_shutdown:
+        rospy.spin()
+
             
 if __name__ == '__main__':
     __main__()
