@@ -6,9 +6,9 @@ import time
 import numpy as np
 from pygame import mixer
 from controlCenter import ControlCenter
-from challenges.msg import Song
-from challenges.msg import moves
-from challenges.msg import state
+from buff_pkg.msg import Song
+from buff_pkg.msg import moves
+from buff_pkg.msg import state
 
 class Driver(object):
 
@@ -18,9 +18,6 @@ class Driver(object):
         rospy.Subscriber('music/song', Song, self.data_callback)
         rospy.Subscriber('tello/moves', ControlCenter, self.moves_callback())
         
-
-        ### we need to incorporate moves/state somehow, i'm not too sure how those work ###
-
     def data_callback(self, data):
         self.data = data        # listen to music input node, store file path of song
         self.filename = self.data.filename
