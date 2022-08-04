@@ -21,7 +21,7 @@ class MusicInput(object):
                 self.pickup = False
 
 
-            path = Path().absolute().parent / "FinalProject" / "catkin_ws" / "src" / "buff_pkg" / "data"
+            path = Path().absolute().parent /"BuffBobasProject"
             print(path)
 
             if ".wav" in self.file:
@@ -70,7 +70,8 @@ class Driver(object):
 
     def getDrawInput(self, number):
         x = ControlCenter(number)
-        self.movesList = x.getMoves()
+        x.getMoves()
+        self.movesList = x.movesList
         print(self.movesList)
     
 
@@ -246,8 +247,5 @@ class Driver(object):
 if __name__ == '__main__':
     dr = Driver()
     # driver.execute_dance()
-    # print("1 here")
     # musicInput = MusicInput()
-    # musicInput.song_pub()
-    count = 0
     dr.getDrawInput(5)
