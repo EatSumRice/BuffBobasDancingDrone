@@ -53,7 +53,8 @@ class Driver(object):
 
     def __init__(self):
         self.received_song = False
-        self.drone = Tello.connect()
+        self.drone = Tello()
+        self.drone.connect()
         ### we need to incorporate moves/state somehow, i'm not too sure how those work ###
 
     def data_callback(self, msg):
