@@ -29,7 +29,7 @@ class Driver(object):
         # subscribe to the timestamps of each beat
         self.beatDurations_sub = rospy.Subscriber('music/beatDuration', state, self.beatDuration_callback)
         # subscribe to the durations of each beat
-        self.moves_sub = rospy.Subscriber('tello/moves', ControlCenter, self.moves_callback())
+        self.moves_sub = rospy.Subscriber('tello/moves', moves, self.moves_callback())
         
 
         # alex, make sure u subscribe to stuff from draw input so it can 
