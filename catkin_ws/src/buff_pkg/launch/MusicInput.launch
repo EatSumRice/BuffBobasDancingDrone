@@ -1,0 +1,3 @@
+<launch>
+    <node name="musicInput" pkg="buff_pkg" type="MusicInput.py" output="screen" />
+</launch>

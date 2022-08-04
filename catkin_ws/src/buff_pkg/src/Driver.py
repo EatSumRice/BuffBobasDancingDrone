@@ -8,7 +8,7 @@ class Driver(object):
         rospy.init_node("driver", anonymous=True, disable_signals=True)
 
 def __main__():
-    driverInput = DriverInput()
+    driverInput = Driver()
             
 if __name__ == '__main__':
     __main__()
