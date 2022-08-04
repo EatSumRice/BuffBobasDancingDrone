@@ -38,7 +38,11 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/buff_pkg/msg" TYPE FILE FILES "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Song.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/buff_pkg/msg" TYPE FILE FILES
+    "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Song.msg"
+    "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Moves.msg"
+    "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/State.msg"
+    )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

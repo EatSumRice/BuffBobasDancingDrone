@@ -54,6 +54,8 @@ CMAKE_BINARY_DIR = /home/jaden/FinalProject/catkin_ws/build
 include buff_pkg/CMakeFiles/buff_pkg_generate_messages_eus.dir/progress.make
 
 buff_pkg/CMakeFiles/buff_pkg_generate_messages_eus: /home/jaden/FinalProject/catkin_ws/devel/share/roseus/ros/buff_pkg/msg/Song.l
+buff_pkg/CMakeFiles/buff_pkg_generate_messages_eus: /home/jaden/FinalProject/catkin_ws/devel/share/roseus/ros/buff_pkg/msg/Moves.l
+buff_pkg/CMakeFiles/buff_pkg_generate_messages_eus: /home/jaden/FinalProject/catkin_ws/devel/share/roseus/ros/buff_pkg/msg/State.l
 buff_pkg/CMakeFiles/buff_pkg_generate_messages_eus: /home/jaden/FinalProject/catkin_ws/devel/share/roseus/ros/buff_pkg/manifest.l
 
 
@@ -62,12 +64,24 @@ buff_pkg/CMakeFiles/buff_pkg_generate_messages_eus: /home/jaden/FinalProject/cat
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jaden/FinalProject/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from buff_pkg/Song.msg"
 	cd /home/jaden/FinalProject/catkin_ws/build/buff_pkg && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Song.msg -Ibuff_pkg:/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p buff_pkg -o /home/jaden/FinalProject/catkin_ws/devel/share/roseus/ros/buff_pkg/msg
 
+/home/jaden/FinalProject/catkin_ws/devel/share/roseus/ros/buff_pkg/msg/Moves.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/jaden/FinalProject/catkin_ws/devel/share/roseus/ros/buff_pkg/msg/Moves.l: /home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Moves.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jaden/FinalProject/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from buff_pkg/Moves.msg"
+	cd /home/jaden/FinalProject/catkin_ws/build/buff_pkg && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Moves.msg -Ibuff_pkg:/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p buff_pkg -o /home/jaden/FinalProject/catkin_ws/devel/share/roseus/ros/buff_pkg/msg
+
+/home/jaden/FinalProject/catkin_ws/devel/share/roseus/ros/buff_pkg/msg/State.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/jaden/FinalProject/catkin_ws/devel/share/roseus/ros/buff_pkg/msg/State.l: /home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/State.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jaden/FinalProject/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from buff_pkg/State.msg"
+	cd /home/jaden/FinalProject/catkin_ws/build/buff_pkg && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/State.msg -Ibuff_pkg:/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p buff_pkg -o /home/jaden/FinalProject/catkin_ws/devel/share/roseus/ros/buff_pkg/msg
+
 /home/jaden/FinalProject/catkin_ws/devel/share/roseus/ros/buff_pkg/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jaden/FinalProject/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp manifest code for buff_pkg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jaden/FinalProject/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp manifest code for buff_pkg"
 	cd /home/jaden/FinalProject/catkin_ws/build/buff_pkg && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/jaden/FinalProject/catkin_ws/devel/share/roseus/ros/buff_pkg buff_pkg std_msgs
 
 buff_pkg_generate_messages_eus: buff_pkg/CMakeFiles/buff_pkg_generate_messages_eus
 buff_pkg_generate_messages_eus: /home/jaden/FinalProject/catkin_ws/devel/share/roseus/ros/buff_pkg/msg/Song.l
+buff_pkg_generate_messages_eus: /home/jaden/FinalProject/catkin_ws/devel/share/roseus/ros/buff_pkg/msg/Moves.l
+buff_pkg_generate_messages_eus: /home/jaden/FinalProject/catkin_ws/devel/share/roseus/ros/buff_pkg/msg/State.l
 buff_pkg_generate_messages_eus: /home/jaden/FinalProject/catkin_ws/devel/share/roseus/ros/buff_pkg/manifest.l
 buff_pkg_generate_messages_eus: buff_pkg/CMakeFiles/buff_pkg_generate_messages_eus.dir/build.make
 

@@ -13,7 +13,7 @@ class MusicInput(object):
 
     def __init__(self):
         rospy.init_node("MusicInput", anonymous=True, disable_signals=True)
-        self.pub_song = rospy.Publisher('music/song', Song, queue_size = 10)
+        self.pub_song = rospy.Publisher('/music/song', Song, queue_size = 10)
         print('Enter .wav file:')
         self.file = input()
         self.time_sig = int(input('Enter beats per measure: '))
@@ -22,6 +22,8 @@ class MusicInput(object):
             self.pickup = True
         else:
             self.pickup = False
+
+        self.rate = rospy.Rate(10)
 
         path = Path().absolute().parent / "FinalProject" / "catkin_ws" / "src" / "buff_pkg" / "data"
         print(path)
@@ -49,7 +51,7 @@ class MusicInput(object):
 
     def song_pub(self):
         song = Song()
-        song.filename = self.filename
+        song.filename = str(self.filename)
         song.tempo = self.tempo
         song.time_sig = self.time_sig
         song.pickup = self.pickup
@@ -59,7 +61,7 @@ class MusicInput(object):
 def __main__():
     musicInput = MusicInput()
     musicInput.song_pub()
-    while not rospy.is_shutdown:
+    while not rospy.is_shutdown():
         rospy.spin()
 
             

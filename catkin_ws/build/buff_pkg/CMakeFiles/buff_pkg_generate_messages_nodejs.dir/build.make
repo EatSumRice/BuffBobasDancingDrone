@@ -54,6 +54,8 @@ CMAKE_BINARY_DIR = /home/jaden/FinalProject/catkin_ws/build
 include buff_pkg/CMakeFiles/buff_pkg_generate_messages_nodejs.dir/progress.make
 
 buff_pkg/CMakeFiles/buff_pkg_generate_messages_nodejs: /home/jaden/FinalProject/catkin_ws/devel/share/gennodejs/ros/buff_pkg/msg/Song.js
+buff_pkg/CMakeFiles/buff_pkg_generate_messages_nodejs: /home/jaden/FinalProject/catkin_ws/devel/share/gennodejs/ros/buff_pkg/msg/Moves.js
+buff_pkg/CMakeFiles/buff_pkg_generate_messages_nodejs: /home/jaden/FinalProject/catkin_ws/devel/share/gennodejs/ros/buff_pkg/msg/State.js
 
 
 /home/jaden/FinalProject/catkin_ws/devel/share/gennodejs/ros/buff_pkg/msg/Song.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
@@ -61,8 +63,20 @@ buff_pkg/CMakeFiles/buff_pkg_generate_messages_nodejs: /home/jaden/FinalProject/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jaden/FinalProject/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from buff_pkg/Song.msg"
 	cd /home/jaden/FinalProject/catkin_ws/build/buff_pkg && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Song.msg -Ibuff_pkg:/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p buff_pkg -o /home/jaden/FinalProject/catkin_ws/devel/share/gennodejs/ros/buff_pkg/msg
 
+/home/jaden/FinalProject/catkin_ws/devel/share/gennodejs/ros/buff_pkg/msg/Moves.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/jaden/FinalProject/catkin_ws/devel/share/gennodejs/ros/buff_pkg/msg/Moves.js: /home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Moves.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jaden/FinalProject/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from buff_pkg/Moves.msg"
+	cd /home/jaden/FinalProject/catkin_ws/build/buff_pkg && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Moves.msg -Ibuff_pkg:/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p buff_pkg -o /home/jaden/FinalProject/catkin_ws/devel/share/gennodejs/ros/buff_pkg/msg
+
+/home/jaden/FinalProject/catkin_ws/devel/share/gennodejs/ros/buff_pkg/msg/State.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/jaden/FinalProject/catkin_ws/devel/share/gennodejs/ros/buff_pkg/msg/State.js: /home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/State.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jaden/FinalProject/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from buff_pkg/State.msg"
+	cd /home/jaden/FinalProject/catkin_ws/build/buff_pkg && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/State.msg -Ibuff_pkg:/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p buff_pkg -o /home/jaden/FinalProject/catkin_ws/devel/share/gennodejs/ros/buff_pkg/msg
+
 buff_pkg_generate_messages_nodejs: buff_pkg/CMakeFiles/buff_pkg_generate_messages_nodejs
 buff_pkg_generate_messages_nodejs: /home/jaden/FinalProject/catkin_ws/devel/share/gennodejs/ros/buff_pkg/msg/Song.js
+buff_pkg_generate_messages_nodejs: /home/jaden/FinalProject/catkin_ws/devel/share/gennodejs/ros/buff_pkg/msg/Moves.js
+buff_pkg_generate_messages_nodejs: /home/jaden/FinalProject/catkin_ws/devel/share/gennodejs/ros/buff_pkg/msg/State.js
 buff_pkg_generate_messages_nodejs: buff_pkg/CMakeFiles/buff_pkg_generate_messages_nodejs.dir/build.make
 
 .PHONY : buff_pkg_generate_messages_nodejs

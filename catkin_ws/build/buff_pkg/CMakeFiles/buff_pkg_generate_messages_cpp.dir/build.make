@@ -54,6 +54,8 @@ CMAKE_BINARY_DIR = /home/jaden/FinalProject/catkin_ws/build
 include buff_pkg/CMakeFiles/buff_pkg_generate_messages_cpp.dir/progress.make
 
 buff_pkg/CMakeFiles/buff_pkg_generate_messages_cpp: /home/jaden/FinalProject/catkin_ws/devel/include/buff_pkg/Song.h
+buff_pkg/CMakeFiles/buff_pkg_generate_messages_cpp: /home/jaden/FinalProject/catkin_ws/devel/include/buff_pkg/Moves.h
+buff_pkg/CMakeFiles/buff_pkg_generate_messages_cpp: /home/jaden/FinalProject/catkin_ws/devel/include/buff_pkg/State.h
 
 
 /home/jaden/FinalProject/catkin_ws/devel/include/buff_pkg/Song.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
@@ -62,8 +64,22 @@ buff_pkg/CMakeFiles/buff_pkg_generate_messages_cpp: /home/jaden/FinalProject/cat
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jaden/FinalProject/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from buff_pkg/Song.msg"
 	cd /home/jaden/FinalProject/catkin_ws/src/buff_pkg && /home/jaden/FinalProject/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Song.msg -Ibuff_pkg:/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p buff_pkg -o /home/jaden/FinalProject/catkin_ws/devel/include/buff_pkg -e /opt/ros/noetic/share/gencpp/cmake/..
 
+/home/jaden/FinalProject/catkin_ws/devel/include/buff_pkg/Moves.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/jaden/FinalProject/catkin_ws/devel/include/buff_pkg/Moves.h: /home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Moves.msg
+/home/jaden/FinalProject/catkin_ws/devel/include/buff_pkg/Moves.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jaden/FinalProject/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from buff_pkg/Moves.msg"
+	cd /home/jaden/FinalProject/catkin_ws/src/buff_pkg && /home/jaden/FinalProject/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Moves.msg -Ibuff_pkg:/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p buff_pkg -o /home/jaden/FinalProject/catkin_ws/devel/include/buff_pkg -e /opt/ros/noetic/share/gencpp/cmake/..
+
+/home/jaden/FinalProject/catkin_ws/devel/include/buff_pkg/State.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/jaden/FinalProject/catkin_ws/devel/include/buff_pkg/State.h: /home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/State.msg
+/home/jaden/FinalProject/catkin_ws/devel/include/buff_pkg/State.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jaden/FinalProject/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from buff_pkg/State.msg"
+	cd /home/jaden/FinalProject/catkin_ws/src/buff_pkg && /home/jaden/FinalProject/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/State.msg -Ibuff_pkg:/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p buff_pkg -o /home/jaden/FinalProject/catkin_ws/devel/include/buff_pkg -e /opt/ros/noetic/share/gencpp/cmake/..
+
 buff_pkg_generate_messages_cpp: buff_pkg/CMakeFiles/buff_pkg_generate_messages_cpp
 buff_pkg_generate_messages_cpp: /home/jaden/FinalProject/catkin_ws/devel/include/buff_pkg/Song.h
+buff_pkg_generate_messages_cpp: /home/jaden/FinalProject/catkin_ws/devel/include/buff_pkg/Moves.h
+buff_pkg_generate_messages_cpp: /home/jaden/FinalProject/catkin_ws/devel/include/buff_pkg/State.h
 buff_pkg_generate_messages_cpp: buff_pkg/CMakeFiles/buff_pkg_generate_messages_cpp.dir/build.make
 
 .PHONY : buff_pkg_generate_messages_cpp

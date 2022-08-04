@@ -54,6 +54,8 @@ CMAKE_BINARY_DIR = /home/jaden/FinalProject/catkin_ws/build
 include buff_pkg/CMakeFiles/buff_pkg_generate_messages_py.dir/progress.make
 
 buff_pkg/CMakeFiles/buff_pkg_generate_messages_py: /home/jaden/FinalProject/catkin_ws/devel/lib/python3/dist-packages/buff_pkg/msg/_Song.py
+buff_pkg/CMakeFiles/buff_pkg_generate_messages_py: /home/jaden/FinalProject/catkin_ws/devel/lib/python3/dist-packages/buff_pkg/msg/_Moves.py
+buff_pkg/CMakeFiles/buff_pkg_generate_messages_py: /home/jaden/FinalProject/catkin_ws/devel/lib/python3/dist-packages/buff_pkg/msg/_State.py
 buff_pkg/CMakeFiles/buff_pkg_generate_messages_py: /home/jaden/FinalProject/catkin_ws/devel/lib/python3/dist-packages/buff_pkg/msg/__init__.py
 
 
@@ -62,13 +64,27 @@ buff_pkg/CMakeFiles/buff_pkg_generate_messages_py: /home/jaden/FinalProject/catk
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jaden/FinalProject/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG buff_pkg/Song"
 	cd /home/jaden/FinalProject/catkin_ws/build/buff_pkg && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Song.msg -Ibuff_pkg:/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p buff_pkg -o /home/jaden/FinalProject/catkin_ws/devel/lib/python3/dist-packages/buff_pkg/msg
 
+/home/jaden/FinalProject/catkin_ws/devel/lib/python3/dist-packages/buff_pkg/msg/_Moves.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/jaden/FinalProject/catkin_ws/devel/lib/python3/dist-packages/buff_pkg/msg/_Moves.py: /home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Moves.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jaden/FinalProject/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG buff_pkg/Moves"
+	cd /home/jaden/FinalProject/catkin_ws/build/buff_pkg && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Moves.msg -Ibuff_pkg:/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p buff_pkg -o /home/jaden/FinalProject/catkin_ws/devel/lib/python3/dist-packages/buff_pkg/msg
+
+/home/jaden/FinalProject/catkin_ws/devel/lib/python3/dist-packages/buff_pkg/msg/_State.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/jaden/FinalProject/catkin_ws/devel/lib/python3/dist-packages/buff_pkg/msg/_State.py: /home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/State.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jaden/FinalProject/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG buff_pkg/State"
+	cd /home/jaden/FinalProject/catkin_ws/build/buff_pkg && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/State.msg -Ibuff_pkg:/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p buff_pkg -o /home/jaden/FinalProject/catkin_ws/devel/lib/python3/dist-packages/buff_pkg/msg
+
 /home/jaden/FinalProject/catkin_ws/devel/lib/python3/dist-packages/buff_pkg/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/jaden/FinalProject/catkin_ws/devel/lib/python3/dist-packages/buff_pkg/msg/__init__.py: /home/jaden/FinalProject/catkin_ws/devel/lib/python3/dist-packages/buff_pkg/msg/_Song.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jaden/FinalProject/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python msg __init__.py for buff_pkg"
+/home/jaden/FinalProject/catkin_ws/devel/lib/python3/dist-packages/buff_pkg/msg/__init__.py: /home/jaden/FinalProject/catkin_ws/devel/lib/python3/dist-packages/buff_pkg/msg/_Moves.py
+/home/jaden/FinalProject/catkin_ws/devel/lib/python3/dist-packages/buff_pkg/msg/__init__.py: /home/jaden/FinalProject/catkin_ws/devel/lib/python3/dist-packages/buff_pkg/msg/_State.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jaden/FinalProject/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python msg __init__.py for buff_pkg"
 	cd /home/jaden/FinalProject/catkin_ws/build/buff_pkg && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/jaden/FinalProject/catkin_ws/devel/lib/python3/dist-packages/buff_pkg/msg --initpy
 
 buff_pkg_generate_messages_py: buff_pkg/CMakeFiles/buff_pkg_generate_messages_py
 buff_pkg_generate_messages_py: /home/jaden/FinalProject/catkin_ws/devel/lib/python3/dist-packages/buff_pkg/msg/_Song.py
+buff_pkg_generate_messages_py: /home/jaden/FinalProject/catkin_ws/devel/lib/python3/dist-packages/buff_pkg/msg/_Moves.py
+buff_pkg_generate_messages_py: /home/jaden/FinalProject/catkin_ws/devel/lib/python3/dist-packages/buff_pkg/msg/_State.py
 buff_pkg_generate_messages_py: /home/jaden/FinalProject/catkin_ws/devel/lib/python3/dist-packages/buff_pkg/msg/__init__.py
 buff_pkg_generate_messages_py: buff_pkg/CMakeFiles/buff_pkg_generate_messages_py.dir/build.make
 

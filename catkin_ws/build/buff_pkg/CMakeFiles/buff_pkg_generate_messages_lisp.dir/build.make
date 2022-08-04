@@ -54,6 +54,8 @@ CMAKE_BINARY_DIR = /home/jaden/FinalProject/catkin_ws/build
 include buff_pkg/CMakeFiles/buff_pkg_generate_messages_lisp.dir/progress.make
 
 buff_pkg/CMakeFiles/buff_pkg_generate_messages_lisp: /home/jaden/FinalProject/catkin_ws/devel/share/common-lisp/ros/buff_pkg/msg/Song.lisp
+buff_pkg/CMakeFiles/buff_pkg_generate_messages_lisp: /home/jaden/FinalProject/catkin_ws/devel/share/common-lisp/ros/buff_pkg/msg/Moves.lisp
+buff_pkg/CMakeFiles/buff_pkg_generate_messages_lisp: /home/jaden/FinalProject/catkin_ws/devel/share/common-lisp/ros/buff_pkg/msg/State.lisp
 
 
 /home/jaden/FinalProject/catkin_ws/devel/share/common-lisp/ros/buff_pkg/msg/Song.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
@@ -61,8 +63,20 @@ buff_pkg/CMakeFiles/buff_pkg_generate_messages_lisp: /home/jaden/FinalProject/ca
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jaden/FinalProject/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from buff_pkg/Song.msg"
 	cd /home/jaden/FinalProject/catkin_ws/build/buff_pkg && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Song.msg -Ibuff_pkg:/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p buff_pkg -o /home/jaden/FinalProject/catkin_ws/devel/share/common-lisp/ros/buff_pkg/msg
 
+/home/jaden/FinalProject/catkin_ws/devel/share/common-lisp/ros/buff_pkg/msg/Moves.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/jaden/FinalProject/catkin_ws/devel/share/common-lisp/ros/buff_pkg/msg/Moves.lisp: /home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Moves.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jaden/FinalProject/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from buff_pkg/Moves.msg"
+	cd /home/jaden/FinalProject/catkin_ws/build/buff_pkg && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Moves.msg -Ibuff_pkg:/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p buff_pkg -o /home/jaden/FinalProject/catkin_ws/devel/share/common-lisp/ros/buff_pkg/msg
+
+/home/jaden/FinalProject/catkin_ws/devel/share/common-lisp/ros/buff_pkg/msg/State.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/jaden/FinalProject/catkin_ws/devel/share/common-lisp/ros/buff_pkg/msg/State.lisp: /home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/State.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jaden/FinalProject/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Lisp code from buff_pkg/State.msg"
+	cd /home/jaden/FinalProject/catkin_ws/build/buff_pkg && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/State.msg -Ibuff_pkg:/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p buff_pkg -o /home/jaden/FinalProject/catkin_ws/devel/share/common-lisp/ros/buff_pkg/msg
+
 buff_pkg_generate_messages_lisp: buff_pkg/CMakeFiles/buff_pkg_generate_messages_lisp
 buff_pkg_generate_messages_lisp: /home/jaden/FinalProject/catkin_ws/devel/share/common-lisp/ros/buff_pkg/msg/Song.lisp
+buff_pkg_generate_messages_lisp: /home/jaden/FinalProject/catkin_ws/devel/share/common-lisp/ros/buff_pkg/msg/Moves.lisp
+buff_pkg_generate_messages_lisp: /home/jaden/FinalProject/catkin_ws/devel/share/common-lisp/ros/buff_pkg/msg/State.lisp
 buff_pkg_generate_messages_lisp: buff_pkg/CMakeFiles/buff_pkg_generate_messages_lisp.dir/build.make
 
 .PHONY : buff_pkg_generate_messages_lisp

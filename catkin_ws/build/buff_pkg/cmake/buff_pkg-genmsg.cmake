@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "buff_pkg: 1 messages, 0 services")
+message(STATUS "buff_pkg: 3 messages, 0 services")
 
 set(MSG_I_FLAGS "-Ibuff_pkg:/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
 
@@ -22,6 +22,16 @@ add_custom_target(_buff_pkg_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "buff_pkg" "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Song.msg" ""
 )
 
+get_filename_component(_filename "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Moves.msg" NAME_WE)
+add_custom_target(_buff_pkg_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "buff_pkg" "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Moves.msg" ""
+)
+
+get_filename_component(_filename "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/State.msg" NAME_WE)
+add_custom_target(_buff_pkg_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "buff_pkg" "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/State.msg" ""
+)
+
 #
 #  langs = gencpp;geneus;genlisp;gennodejs;genpy
 #
@@ -30,6 +40,18 @@ add_custom_target(_buff_pkg_generate_messages_check_deps_${_filename}
 ### Generating Messages
 _generate_msg_cpp(buff_pkg
   "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Song.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/buff_pkg
+)
+_generate_msg_cpp(buff_pkg
+  "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Moves.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/buff_pkg
+)
+_generate_msg_cpp(buff_pkg
+  "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/State.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/buff_pkg
@@ -51,6 +73,10 @@ add_dependencies(buff_pkg_generate_messages buff_pkg_generate_messages_cpp)
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Song.msg" NAME_WE)
 add_dependencies(buff_pkg_generate_messages_cpp _buff_pkg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Moves.msg" NAME_WE)
+add_dependencies(buff_pkg_generate_messages_cpp _buff_pkg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/State.msg" NAME_WE)
+add_dependencies(buff_pkg_generate_messages_cpp _buff_pkg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(buff_pkg_gencpp)
@@ -63,6 +89,18 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS buff_pkg_generate_messages_cpp)
 ### Generating Messages
 _generate_msg_eus(buff_pkg
   "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Song.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/buff_pkg
+)
+_generate_msg_eus(buff_pkg
+  "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Moves.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/buff_pkg
+)
+_generate_msg_eus(buff_pkg
+  "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/State.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/buff_pkg
@@ -84,6 +122,10 @@ add_dependencies(buff_pkg_generate_messages buff_pkg_generate_messages_eus)
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Song.msg" NAME_WE)
 add_dependencies(buff_pkg_generate_messages_eus _buff_pkg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Moves.msg" NAME_WE)
+add_dependencies(buff_pkg_generate_messages_eus _buff_pkg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/State.msg" NAME_WE)
+add_dependencies(buff_pkg_generate_messages_eus _buff_pkg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(buff_pkg_geneus)
@@ -96,6 +138,18 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS buff_pkg_generate_messages_eus)
 ### Generating Messages
 _generate_msg_lisp(buff_pkg
   "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Song.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/buff_pkg
+)
+_generate_msg_lisp(buff_pkg
+  "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Moves.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/buff_pkg
+)
+_generate_msg_lisp(buff_pkg
+  "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/State.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/buff_pkg
@@ -117,6 +171,10 @@ add_dependencies(buff_pkg_generate_messages buff_pkg_generate_messages_lisp)
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Song.msg" NAME_WE)
 add_dependencies(buff_pkg_generate_messages_lisp _buff_pkg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Moves.msg" NAME_WE)
+add_dependencies(buff_pkg_generate_messages_lisp _buff_pkg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/State.msg" NAME_WE)
+add_dependencies(buff_pkg_generate_messages_lisp _buff_pkg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(buff_pkg_genlisp)
@@ -129,6 +187,18 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS buff_pkg_generate_messages_lisp)
 ### Generating Messages
 _generate_msg_nodejs(buff_pkg
   "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Song.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/buff_pkg
+)
+_generate_msg_nodejs(buff_pkg
+  "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Moves.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/buff_pkg
+)
+_generate_msg_nodejs(buff_pkg
+  "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/State.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/buff_pkg
@@ -150,6 +220,10 @@ add_dependencies(buff_pkg_generate_messages buff_pkg_generate_messages_nodejs)
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Song.msg" NAME_WE)
 add_dependencies(buff_pkg_generate_messages_nodejs _buff_pkg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Moves.msg" NAME_WE)
+add_dependencies(buff_pkg_generate_messages_nodejs _buff_pkg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/State.msg" NAME_WE)
+add_dependencies(buff_pkg_generate_messages_nodejs _buff_pkg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(buff_pkg_gennodejs)
@@ -162,6 +236,18 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS buff_pkg_generate_messages_nodejs)
 ### Generating Messages
 _generate_msg_py(buff_pkg
   "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Song.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/buff_pkg
+)
+_generate_msg_py(buff_pkg
+  "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Moves.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/buff_pkg
+)
+_generate_msg_py(buff_pkg
+  "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/State.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/buff_pkg
@@ -182,6 +268,10 @@ add_dependencies(buff_pkg_generate_messages buff_pkg_generate_messages_py)
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Song.msg" NAME_WE)
+add_dependencies(buff_pkg_generate_messages_py _buff_pkg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Moves.msg" NAME_WE)
+add_dependencies(buff_pkg_generate_messages_py _buff_pkg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/State.msg" NAME_WE)
 add_dependencies(buff_pkg_generate_messages_py _buff_pkg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

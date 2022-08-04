@@ -56,4 +56,4 @@ class ControlCenter:
 cc = ControlCenter(1)
 cc.getMoves()
 cc.printMoves()
-cc.performMoves()
+#cc.performMoves()

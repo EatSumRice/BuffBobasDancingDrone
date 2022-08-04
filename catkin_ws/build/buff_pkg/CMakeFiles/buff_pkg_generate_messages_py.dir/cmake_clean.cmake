@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
+  "/home/jaden/FinalProject/catkin_ws/devel/lib/python3/dist-packages/buff_pkg/msg/_Moves.py"
   "/home/jaden/FinalProject/catkin_ws/devel/lib/python3/dist-packages/buff_pkg/msg/_Song.py"
+  "/home/jaden/FinalProject/catkin_ws/devel/lib/python3/dist-packages/buff_pkg/msg/_State.py"
   "/home/jaden/FinalProject/catkin_ws/devel/lib/python3/dist-packages/buff_pkg/msg/__init__.py"
   "CMakeFiles/buff_pkg_generate_messages_py"
 )

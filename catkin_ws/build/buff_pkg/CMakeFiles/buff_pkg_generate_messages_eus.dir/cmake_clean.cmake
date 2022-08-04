@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "/home/jaden/FinalProject/catkin_ws/devel/share/roseus/ros/buff_pkg/manifest.l"
+  "/home/jaden/FinalProject/catkin_ws/devel/share/roseus/ros/buff_pkg/msg/Moves.l"
   "/home/jaden/FinalProject/catkin_ws/devel/share/roseus/ros/buff_pkg/msg/Song.l"
+  "/home/jaden/FinalProject/catkin_ws/devel/share/roseus/ros/buff_pkg/msg/State.l"
   "CMakeFiles/buff_pkg_generate_messages_eus"
 )
 

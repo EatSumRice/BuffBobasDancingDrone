@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Song.msg"
+messages_str = "/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Song.msg;/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/Moves.msg;/home/jaden/FinalProject/catkin_ws/src/buff_pkg/msg/State.msg"
 services_str = ""
 pkg_name = "buff_pkg"
 dependencies_str = "std_msgs"
