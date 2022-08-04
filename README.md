@@ -181,6 +181,10 @@ steps to accomplish:
 - determine how long dance moves take and revise timing values in `bpm_test.py`
 - storing dance moves in an ordered and iterable sequence
 
+# day 4:
+
+bringing everything together in ROS, trying to figure out how to handle publisher and subscribers. ideally, all music data would be published in one message, and the driver node would subscribe to this message and save all this preprocessing information. 
+
 
 
 
