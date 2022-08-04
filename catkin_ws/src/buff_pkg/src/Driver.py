@@ -8,7 +8,6 @@ from pygame import mixer
 from controlCenter import ControlCenter
 from buff_pkg.msg import Song
 from buff_pkg.msg import Moves
-from buff_pkg.msg import state
 
 class Driver(object):
 
