@@ -5,7 +5,6 @@ from djitellopy import Tello
 import time
 import numpy as np
 from pygame import mixer
-from controlCenter import ControlCenter
 from buff_pkg.msg import Song
 from buff_pkg.msg import Moves
 
