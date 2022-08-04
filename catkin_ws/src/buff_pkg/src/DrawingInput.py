@@ -9,10 +9,12 @@ class DrawingInput(object):
 
         rospy.init_node("DrawingInput", anonymous = True) 
         #anonymous prevents the error of two nodes same name
-        self.number_moves_sub = rospy.Subscriber("tello/numbermoves", int, 
+        self.number_moves_sub = rospy.Subscriber("/tello/numbermoves", int, 
                                                 self.publish_moves)
-        self.moves_pub = rospy.Publisher('tello/moves', ControlCenter, 
+        self.moves_pub = rospy.Publisher('/tello/moves', ControlCenter, 
                                             queue_size = 10)
+
+        self.rate = rospy.Rate(10)
 
     def publish_moves(self, data):
         
@@ -22,6 +24,7 @@ class DrawingInput(object):
 def __main__():
     drawingInput = DrawingInput()
     while not rospy.is_shutdown:
+        rospy.spin()
 
 
 if __name__ == "__main__":

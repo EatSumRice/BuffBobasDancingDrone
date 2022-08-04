@@ -284,6 +284,227 @@ gtest/fast:
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
+#=============================================================================
+# Target rules for targets named buff_pkg_genpy
+
+# Build rule for target.
+buff_pkg_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 buff_pkg_genpy
+.PHONY : buff_pkg_genpy
+
+# fast build rule for target.
+buff_pkg_genpy/fast:
+	$(MAKE) -f buff_pkg/CMakeFiles/buff_pkg_genpy.dir/build.make buff_pkg/CMakeFiles/buff_pkg_genpy.dir/build
+.PHONY : buff_pkg_genpy/fast
+
+#=============================================================================
+# Target rules for targets named buff_pkg_generate_messages_py
+
+# Build rule for target.
+buff_pkg_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 buff_pkg_generate_messages_py
+.PHONY : buff_pkg_generate_messages_py
+
+# fast build rule for target.
+buff_pkg_generate_messages_py/fast:
+	$(MAKE) -f buff_pkg/CMakeFiles/buff_pkg_generate_messages_py.dir/build.make buff_pkg/CMakeFiles/buff_pkg_generate_messages_py.dir/build
+.PHONY : buff_pkg_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named buff_pkg_generate_messages_nodejs
+
+# Build rule for target.
+buff_pkg_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 buff_pkg_generate_messages_nodejs
+.PHONY : buff_pkg_generate_messages_nodejs
+
+# fast build rule for target.
+buff_pkg_generate_messages_nodejs/fast:
+	$(MAKE) -f buff_pkg/CMakeFiles/buff_pkg_generate_messages_nodejs.dir/build.make buff_pkg/CMakeFiles/buff_pkg_generate_messages_nodejs.dir/build
+.PHONY : buff_pkg_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_lisp
+
+# Build rule for target.
+std_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_lisp
+.PHONY : std_msgs_generate_messages_lisp
+
+# fast build rule for target.
+std_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f buff_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make buff_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+.PHONY : std_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_nodejs
+
+# Build rule for target.
+std_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_nodejs
+.PHONY : std_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+std_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f buff_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make buff_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+.PHONY : std_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_py
+
+# Build rule for target.
+std_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_py
+.PHONY : std_msgs_generate_messages_py
+
+# fast build rule for target.
+std_msgs_generate_messages_py/fast:
+	$(MAKE) -f buff_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/build.make buff_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/build
+.PHONY : std_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named buff_pkg_generate_messages
+
+# Build rule for target.
+buff_pkg_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 buff_pkg_generate_messages
+.PHONY : buff_pkg_generate_messages
+
+# fast build rule for target.
+buff_pkg_generate_messages/fast:
+	$(MAKE) -f buff_pkg/CMakeFiles/buff_pkg_generate_messages.dir/build.make buff_pkg/CMakeFiles/buff_pkg_generate_messages.dir/build
+.PHONY : buff_pkg_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named _buff_pkg_generate_messages_check_deps_Song
+
+# Build rule for target.
+_buff_pkg_generate_messages_check_deps_Song: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _buff_pkg_generate_messages_check_deps_Song
+.PHONY : _buff_pkg_generate_messages_check_deps_Song
+
+# fast build rule for target.
+_buff_pkg_generate_messages_check_deps_Song/fast:
+	$(MAKE) -f buff_pkg/CMakeFiles/_buff_pkg_generate_messages_check_deps_Song.dir/build.make buff_pkg/CMakeFiles/_buff_pkg_generate_messages_check_deps_Song.dir/build
+.PHONY : _buff_pkg_generate_messages_check_deps_Song/fast
+
+#=============================================================================
+# Target rules for targets named buff_pkg_generate_messages_lisp
+
+# Build rule for target.
+buff_pkg_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 buff_pkg_generate_messages_lisp
+.PHONY : buff_pkg_generate_messages_lisp
+
+# fast build rule for target.
+buff_pkg_generate_messages_lisp/fast:
+	$(MAKE) -f buff_pkg/CMakeFiles/buff_pkg_generate_messages_lisp.dir/build.make buff_pkg/CMakeFiles/buff_pkg_generate_messages_lisp.dir/build
+.PHONY : buff_pkg_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named buff_pkg_generate_messages_cpp
+
+# Build rule for target.
+buff_pkg_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 buff_pkg_generate_messages_cpp
+.PHONY : buff_pkg_generate_messages_cpp
+
+# fast build rule for target.
+buff_pkg_generate_messages_cpp/fast:
+	$(MAKE) -f buff_pkg/CMakeFiles/buff_pkg_generate_messages_cpp.dir/build.make buff_pkg/CMakeFiles/buff_pkg_generate_messages_cpp.dir/build
+.PHONY : buff_pkg_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_cpp
+
+# Build rule for target.
+std_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_cpp
+.PHONY : std_msgs_generate_messages_cpp
+
+# fast build rule for target.
+std_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f buff_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make buff_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+.PHONY : std_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named buff_pkg_generate_messages_eus
+
+# Build rule for target.
+buff_pkg_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 buff_pkg_generate_messages_eus
+.PHONY : buff_pkg_generate_messages_eus
+
+# fast build rule for target.
+buff_pkg_generate_messages_eus/fast:
+	$(MAKE) -f buff_pkg/CMakeFiles/buff_pkg_generate_messages_eus.dir/build.make buff_pkg/CMakeFiles/buff_pkg_generate_messages_eus.dir/build
+.PHONY : buff_pkg_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named buff_pkg_gencpp
+
+# Build rule for target.
+buff_pkg_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 buff_pkg_gencpp
+.PHONY : buff_pkg_gencpp
+
+# fast build rule for target.
+buff_pkg_gencpp/fast:
+	$(MAKE) -f buff_pkg/CMakeFiles/buff_pkg_gencpp.dir/build.make buff_pkg/CMakeFiles/buff_pkg_gencpp.dir/build
+.PHONY : buff_pkg_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named buff_pkg_gennodejs
+
+# Build rule for target.
+buff_pkg_gennodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 buff_pkg_gennodejs
+.PHONY : buff_pkg_gennodejs
+
+# fast build rule for target.
+buff_pkg_gennodejs/fast:
+	$(MAKE) -f buff_pkg/CMakeFiles/buff_pkg_gennodejs.dir/build.make buff_pkg/CMakeFiles/buff_pkg_gennodejs.dir/build
+.PHONY : buff_pkg_gennodejs/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_eus
+
+# Build rule for target.
+std_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_eus
+.PHONY : std_msgs_generate_messages_eus
+
+# fast build rule for target.
+std_msgs_generate_messages_eus/fast:
+	$(MAKE) -f buff_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make buff_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+.PHONY : std_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named buff_pkg_geneus
+
+# Build rule for target.
+buff_pkg_geneus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 buff_pkg_geneus
+.PHONY : buff_pkg_geneus
+
+# fast build rule for target.
+buff_pkg_geneus/fast:
+	$(MAKE) -f buff_pkg/CMakeFiles/buff_pkg_geneus.dir/build.make buff_pkg/CMakeFiles/buff_pkg_geneus.dir/build
+.PHONY : buff_pkg_geneus/fast
+
+#=============================================================================
+# Target rules for targets named buff_pkg_genlisp
+
+# Build rule for target.
+buff_pkg_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 buff_pkg_genlisp
+.PHONY : buff_pkg_genlisp
+
+# fast build rule for target.
+buff_pkg_genlisp/fast:
+	$(MAKE) -f buff_pkg/CMakeFiles/buff_pkg_genlisp.dir/build.make buff_pkg/CMakeFiles/buff_pkg_genlisp.dir/build
+.PHONY : buff_pkg_genlisp/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -306,6 +527,23 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... buff_pkg_genpy"
+	@echo "... buff_pkg_generate_messages_py"
+	@echo "... buff_pkg_generate_messages_nodejs"
+	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... std_msgs_generate_messages_nodejs"
+	@echo "... std_msgs_generate_messages_py"
+	@echo "... buff_pkg_generate_messages"
+	@echo "... _buff_pkg_generate_messages_check_deps_Song"
+	@echo "... buff_pkg_generate_messages_lisp"
+	@echo "... buff_pkg_generate_messages_cpp"
+	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... buff_pkg_generate_messages_eus"
+	@echo "... buff_pkg_gencpp"
+	@echo "... buff_pkg_gennodejs"
+	@echo "... std_msgs_generate_messages_eus"
+	@echo "... buff_pkg_geneus"
+	@echo "... buff_pkg_genlisp"
 .PHONY : help
 
 

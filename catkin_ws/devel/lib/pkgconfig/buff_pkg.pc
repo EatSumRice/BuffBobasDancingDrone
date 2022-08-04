@@ -1,0 +1,8 @@
+prefix=/home/jaden/FinalProject/catkin_ws/devel
+
+Name: buff_pkg
+Description: Description of buff_pkg
+Version: 0.0.0
+Cflags: -I/home/jaden/FinalProject/catkin_ws/devel/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime

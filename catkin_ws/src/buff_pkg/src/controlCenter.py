@@ -12,9 +12,9 @@ class ControlCenter:
     def __init__(self, m):
         self.moves = m
         self.movesList = []
-        self.drone = Tello()
-        self.drone.connect()
-        print(self.drone.get_battery())
+        #self.drone = Tello()
+        #self.drone.connect()
+        #print(self.drone.get_battery())
     
     def getMoves(self):
         for i in range(self.moves):
@@ -26,7 +26,7 @@ class ControlCenter:
     def printMoves(self):
         print(self.movesList)
 
-    def performMoves(self):
+    """def performMoves(self):
         self.drone.takeoff()
         for i in self.movesList:
             move_type = i[-1]
@@ -50,7 +50,7 @@ class ControlCenter:
             elif(move_type == "3d"):
                 self.drone.go_xyz_speed(0,i[0], 0, i[1])
 
-        self.drone.land()
+        self.drone.land()"""
 
 
 cc = ControlCenter(1)

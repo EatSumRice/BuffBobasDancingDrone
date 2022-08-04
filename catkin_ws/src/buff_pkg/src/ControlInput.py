@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 import rospy
-from std
+from std_msgs
 
 class ControlInput(object):
 
