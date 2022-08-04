@@ -72,6 +72,9 @@ class DanceMoves:
         tello.send_rc_control(0, 50, 100, 90)
         print("Move 10 complete!") 
 
+    move_list = ["",move1(),move2(),move3(),move4(),
+    move5(),move6(),move7(),move8(),move9(),move0()]
+
 
 if __name__ == '__main__':
 
@@ -139,4 +142,3 @@ if __name__ == '__main__':
     cv2.destroyAllWindows
     tello.land()
 
-        
