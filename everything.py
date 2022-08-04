@@ -6,57 +6,54 @@ import time
 from pathlib import Path
 from controlCenter import ControlCenter
 from drawInputBetter import UserStrokeInput
+from djitellopy import Tello
 
 class MusicInput(object):
 
     def __init__(self):
 
-            print('Enter .wav file:')
-            self.file = input()
-            self.time_sig = int(input('Enter beats per measure: '))
-            self.pickup_str = input('Pickup beat (y or n): ')
-            if self.pickup_str == "y":
-                self.pickup = True
-            else:
-                self.pickup = False
+        print('Enter .wav file:')
+        file = input('data/')
 
+        time_sig = int(input('Enter beats per measure: '))
+        while time_sig < 0:
+            time_sig = int(input('Invalid input, please re-enter (above 0): '))
 
-            path = Path().absolute().parent /"BuffBobasProject"
-            print(path)
+        pickup = input('Pickup beat (y or n): ')
+        while (pickup != 'y') and (pickup != 'n'):
+            pickup = input('Invalid input, please re-enter (y or n): ')
+        if pickup == 'y':
+            pickup = True
+        elif pickup == 'n':
+            pickup = False
+            
 
-            if ".wav" in self.file:
-                self.filename = path / self.file
-            else:
-                self.filename = path / (self.file + '.wav')
-            print("running: ",self.filename)
+        if ".wav" in file:
+            filename = 'data/' + file
+        else:
+            filename = 'data/' + file + '.wav'
+        print("\nRunning: ",filename)
 
-            self.y, self.sr = librosa.load(self.filename)
-            print('\nsampling rate')
-            print(self.sr)
+        y, sr = librosa.load(filename)
 
-            self.tempo, self.beat_frames = librosa.beat.beat_track(y=self.y, sr=self.sr)
-            print('Estimated tempo: {:.2f} beats per minute'.format(self.tempo))
-            self.round_tempo = int(round(self.tempo, 0))
+        tempo, beat_frames = librosa.beat.beat_track(y=y, sr=sr)
+        print('Estimated tempo: {:.2f} beats per minute'.format(tempo))
+        self.round_tempo = int(round(tempo, 0))
 
-            self.beat_times = librosa.frames_to_time(self.beat_frames, sr=self.sr)
-            print('Beat frames: ')
-            print(self.beat_times)
-
-            #TODO publish below 
-            self.beat_durations = np.ediff1d(self.beat_times)     # create array of differences between beat frames to get durations
-
+        beat_times = librosa.frames_to_time(beat_frames, sr=sr)
+        self.beat_durations = np.ediff1d(beat_times)     # create array of differences between beat frames to get durations
+    
     def song_init(self):
         self.filename = str(self.filename)
         self.tempo = self.tempo
         self.time_sig = self.time_sig
         self.pickup = self.pickup
-        print("published")
 
 class Driver(object):
 
     def __init__(self):
         self.received_song = False
-        
+        self.drone = Tello.connect()
         ### we need to incorporate moves/state somehow, i'm not too sure how those work ###
 
     def data_callback(self, msg):
@@ -71,12 +68,12 @@ class Driver(object):
     def getDrawInput(self, number):
         x = ControlCenter(number)
         x.getMoves()
-        self.movesList = x.movesList
-        print(self.movesList)
+        self.nodeMovesList = x.movesList
+        print(self.nodeMovesList)
     
 
     def execute_dance(self):
-    
+        self.drone.takeoff()
         mixer.init()        # initialize audio player
         mixer.music.load()
         mixer.music.set_volume(0.1)
@@ -215,6 +212,7 @@ class Driver(object):
             else:
                 y += 1
             time.sleep(i)       # wait for the beat to pass before printing the next beat to test synchronization with 
+            self.drone.land()
 
     def performMove(self, move):
 
@@ -246,6 +244,6 @@ class Driver(object):
     
 if __name__ == '__main__':
     dr = Driver()
-    # driver.execute_dance()
-    # musicInput = MusicInput()
+    musicInput = MusicInput()
     dr.getDrawInput(5)
+    # dr.execute_dance()
