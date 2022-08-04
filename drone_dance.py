@@ -240,4 +240,4 @@ if __name__ == '__main__':
     # musicInput = MusicInput()
     # musicInput.song_pub()
     count = 0
-    dr.getDrawInput(5)
+    dr.get_draw_input(5)
