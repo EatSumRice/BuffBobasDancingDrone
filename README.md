@@ -9,4 +9,4 @@ Day 3 -
 Worked on finding relative times in between dance moves to calculate how to integrate it with the BPM of the song 
 
 Day 4 -
-
+Worked on creating a list within the dance moves class. After that I tried working on getting the run file to parse through the list such that if a user was to not select any dance move or select too few desired dances moves for songs BPM, it would randomly select one from the list. Was unable to get it to work today
