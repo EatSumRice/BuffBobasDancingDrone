@@ -185,17 +185,30 @@ steps to accomplish:
 
 bringing everything together in ROS, trying to figure out how to handle publisher and subscribers. ideally, all music data would be published in one message, and the driver node would subscribe to this message and save all this preprocessing information. 
 
+# day 5:
 
+the drone is not the most capable piece of hardware, so the dance moves just register and happen too slowly to be doing 2 beats/measure at 120 bpm. 
 
+two possible solutions:
 
+1. opt for 1 dance move per measure (the only way to make the dance moves occur in a rhythmically "satisfying" manner)
 
+pros include:
+- more universal and compatible with various songs
+- simpler implementation, would remove the need to do extra calculations on different time signatures
 
+cons include:
+- not as interesting of a dance
 
+2. choose slower audio so the drone has more time in between each dance move
 
+pros include:
+- would allow for more complex dance
 
+cons include:
+- baby shark :(&nbsp;&nbsp;&nbsp;&nbsp;(unless we slow down baby shark?)
 
-
-
+all that's left to do now is the presentations! we made it :)
 
 &nbsp;
 
